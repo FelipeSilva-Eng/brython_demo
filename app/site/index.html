@@ -5,19 +5,25 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/brython@3.10.3/brython.min.js">
     </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.3/brython_stdlib.min.js">
+    </script>
     <script type="text/python" charset="utf-8">
         from browser import bind, document, html
         print('Olá pessoas')
 
-        @bind('button', 'click')
+        @bind('input[type="text"]', 'keyup')
         def click_btn(event):
-            document <= html.P('Clicado')
+            import pdb; pdb.set_trace()
 
 
 </script>
 </head>
 <body onload="brython()">
     Olá mundo
+    <label for="texto"></label>
+    <input type="text" name="texto" value="" />
+    <span></span>
     <button type="button" name=button>Clica nimin</button>
 </body>
 </html>

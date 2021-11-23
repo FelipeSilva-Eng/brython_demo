@@ -1,0 +1,29 @@
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <title>My Website</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10/brython_stdlib.js">
+    </script>
+    <script type="text/python" charset="utf-8">
+        from browser import bind, document, html
+        print('Olá pessoas')
+
+        @bind('input[type="text"]', 'keyup')
+        def click_btn(event):
+            event.currentTarget.value
+            document.select_one('span').text = event.currentTarget.value
+
+
+
+    </script>
+</head>
+<body onload="brython()">
+    <label for="text"></label>
+    <input type="text" name="text" value="" />
+    <span></span>
+</body>
+</html>
