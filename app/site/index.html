@@ -1,10 +1,23 @@
-<html>
+<html lang="pt-br" dir="ltr">
 <head>
+    <meta charset="utf-8"/>
     <title>My Website</title>
-    <link rel='stylesheet' type='text/css' href="static/style.css"/>
-    <link rel='shortcut icon' href="{{ url_for('static', filename='bolt.ico')}}"/
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.3/brython.min.js">
+    </script>
+    <script type="text/python" charset="utf-8">
+        from browser import bind, document, html
+        print('Olá pessoas')
+
+        @bind('button', 'click')
+        def click_btn(event):
+            document <= html.P('Clicado')
+
+
+</script>
 </head>
-<body>
-    Olar mundo
+<body onload="brython()">
+    Olá mundo
+    <button type="button" name=button>Clica nimin</button>
 </body>
 </html>
